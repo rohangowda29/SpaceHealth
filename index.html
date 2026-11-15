@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceHealth | Astronaut Health Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+            <div>
+                <h1>SpaceHealth</h1>
+                <p>ASTRONAUT HEALTH MONITORING SYSTEM</p>
+            </div>
+        </div>
+
+        <div class="mission-info">
+            <span class="live-dot"></span>
+            <span>MISSION SIMULATION</span>
+            <span class="mission-badge">DEMO MODE</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">MISSION CONTROL / CREW HEALTH</p>
+                <h2>Astronaut Health Dashboard</h2>
+                <p class="subtitle">
+                    Monitor crew health indicators and review wellness trends
+                    during long-duration space missions.
+                </p>
+            </div>
+
+            <div class="mission-card">
+                <span>MISSION STATUS</span>
+                <h3>Deep Space Mission</h3>
+                <p>Simulated crew monitoring</p>
+            </div>
+        </section>
+        
+
+<section class="panel crew-profile">
+    <div class="panel-heading">
+        <div>
+            <h2>Crew Member Profile</h2>
+            <p>Simulated astronaut mission information</p>
+        </div>
+        <span class="panel-icon">♙</span>
+    </div>
+
+    <div class="crew-profile-content">
+
+        <div class="crew-avatar">👨‍🚀</div>
+
+        <div class="crew-details">
+            <span class="crew-label">CREW MEMBER</span>
+            <h3>Alex Morgan</h3>
+            <p>Astronaut ID: SH-001</p>
+        </div>
+
+    </div>
+
+    <div class="crew-info-grid">
+
+        <div class="crew-info-item">
+            <span>MISSION NAME</span>
+            <h3>Deep Space Mission</h3>
+        </div>
+
+        <div class="crew-info-item">
+            <span>CURRENT MISSION DAY</span>
+            <h3>Day 128</h3>
+        </div>
+
+        <div class="crew-info-item">
+            <span>MISSION DURATION</span>
+            <h3>365 Days</h3>
+        </div>
+
+        <div class="crew-info-item">
+            <span>CREW STATUS</span>
+            <h3 class="crew-active">● Active</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- MISSION PROGRESS SECTION -->
+
+<section class="panel mission-progress">
+
+    <div class="panel-heading">
+        <div>
+            <h2>Mission Progress</h2>
+            <p>Simulated mission timeline and completion</p>
+        </div>
+        <span class="panel-icon">🚀</span>
+    </div>
+
+    <div class="mission-progress-info">
+        <div>
+            <span class="mission-label">MISSION COMPLETION</span>
+            <h3>35% <span>Completed</span></h3>
+        </div>
+
+        <div class="mission-days">
+            <span>237 Days Remaining</span>
+        </div>
+    </div>
+
+    <div class="progress-track">
+        <div class="progress-fill"></div>
+    </div>
+
+    <div class="mission-stats">
+
+        <div class="mission-stat">
+            <span>MISSION DAY</span>
+            <h3>128</h3>
+        </div>
+
+        <div class="mission-stat">
+            <span>TOTAL DURATION</span>
+            <h3>365 Days</h3>
+        </div>
+
+        <div class="mission-stat">
+            <span>DAYS COMPLETED</span>
+            <h3>128</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CREW HEALTH ALERT SECTION -->
+
+<section class="panel crew-alert" id="crewAlert">
+
+    <div class="panel-heading">
+        <div>
+            <h2>Crew Health Alert</h2>
+            <p>Live astronaut health monitoring alerts</p>
+        </div>
+        <span class="panel-icon">⚠️</span>
+    </div>
+
+    <div class="crew-alert-content">
+
+        <div class="alert-status" id="alertStatus">
+            Awaiting Readings
+        </div>
+
+        <h3 id="alertTitle">No Health Readings Yet</h3>
+
+        <p id="alertMessage">
+            Submit health measurements to view the crew health alert.
+        </p>
+
+        <ul id="alertDetails"></ul>
+
+    </div>
+
+</section>
+
+        <section class="section-heading">
+            <div>
+                <h2>Health Overview</h2>
+                <p>Current simulated health measurements</p>
+            </div>
+            <span class="updated-label">DEMO DATA</span>
+        </section>
+
+        <section class="metrics-grid">
+
+            <article class="metric-card">
+                <div class="metric-top">
+                    <span>Heart Rate</span>
+                    <span class="metric-icon">♥</span>
+                </div>
+                <h3 id="heartRate">72 <small>bpm</small></h3>
+                <p class="metric-status" id="heartStatus">Awaiting data</p>
+            </article>
+
+            <article class="metric-card">
+                <div class="metric-top">
+                    <span>Blood Pressure</span>
+                    <span class="metric-icon">◈</span>
+                </div>
+                <h3 id="bloodPressure">120 <small>mmHg systolic</small></h3>
+                <p class="metric-status" id="bpStatus">Awaiting data</p>
+            </article>
+
+            <article class="metric-card">
+                <div class="metric-top">
+                    <span>Body Temperature</span>
+                    <span class="metric-icon">♨</span>
+                </div>
+                <h3 id="temperature">36.8 <small>°C</small></h3>
+                <p class="metric-status" id="tempStatus">Awaiting data</p>
+            </article>
+
+            <article class="metric-card">
+                <div class="metric-top">
+                    <span>Blood Glucose</span>
+                    <span class="metric-icon">◉</span>
+                </div>
+                <h3 id="glucose">95 <small>mg/dL</small></h3>
+                <p class="metric-status" id="glucoseStatus">Awaiting data</p>
+            </article>
+
+        </section>
+
+        <section class="panel trends-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>Health Trends & Analytics</h2>
+                    <p>Visualize astronaut health measurements over time</p>
+                </div>
+                <span class="updated-label">LIVE HISTORY</span>
+            </div>
+
+            <div class="charts-grid">
+
+                <div class="chart-card">
+                    <h3>Heart Rate Trends</h3>
+                    <div class="chart-container">
+                        <canvas id="heartRateChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Blood Pressure Trends</h3>
+                    <div class="chart-container">
+                        <canvas id="bloodPressureChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Body Temperature Trends</h3>
+                    <div class="chart-container">
+                        <canvas id="temperatureChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Blood Glucose Trends</h3>
+                    <div class="chart-container">
+                        <canvas id="glucoseChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-grid">
+
+            <article class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Update Health Data</h2>
+                        <p>Enter simulated crew health measurements</p>
+                    </div>
+                    <span class="panel-icon">＋</span>
+                </div>
+
+                <form id="healthForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="inputHeartRate">Heart Rate (bpm)</label>
+                            <input type="number" id="inputHeartRate"
+                                min="1" max="250" placeholder="Example: 72" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputBloodPressure">Systolic BP (mmHg)</label>
+                            <input type="number" id="inputBloodPressure"
+                                min="1" max="300" placeholder="Example: 120" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputTemperature">Temperature (°C)</label>
+                            <input type="number" id="inputTemperature"
+                                min="25" max="45" step="0.1"
+                                placeholder="Example: 36.8" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputGlucose">Glucose (mg/dL)</label>
+                            <input type="number" id="inputGlucose"
+                                min="1" max="1000" placeholder="Example: 95" required>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="primary-button">
+                        Update Dashboard →
+                    </button>
+
+                </form>
+            </article>
+
+            <article class="panel wellness-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Psychological Wellness</h2>
+                        <p>Daily crew mood check-in</p>
+                    </div>
+                    <span class="panel-icon">☼</span>
+                </div>
+
+                <p class="wellness-question">
+                    How are you feeling today?
+                </p>
+
+                <div class="mood-options">
+                    <button type="button" class="mood-button" data-mood="Great">
+                        😊<span>Great</span>
+                    </button>
+                    <button type="button" class="mood-button" data-mood="Good">
+                        🙂<span>Good</span>
+                    </button>
+                    <button type="button" class="mood-button" data-mood="Okay">
+                        😐<span>Okay</span>
+                    </button>
+                    <button type="button" class="mood-button" data-mood="Low">
+                        😟<span>Low</span>
+                    </button>
+                    <button type="button" class="mood-button" data-mood="Stressed">
+                        😣<span>Stressed</span>
+                    </button>
+                </div>
+
+                <p id="moodMessage" class="mood-message">
+                    Select an option to record your check-in.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="panel history-panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Health Activity History</h2>
+                    <p>Previously entered simulated measurements</p>
+                </div>
+                <button type="button" id="clearHistory" class="secondary-button">
+                    Clear History
+                </button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Heart Rate</th>
+                            <th>Blood Pressure</th>
+                            <th>Temperature</th>
+                            <th>Glucose</th>
+                            <th>Review</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr>
+                            <td colspan="6" class="empty-state">
+                                No measurements recorded yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel hazards-panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Space Mission Health Risks</h2>
+                    <p>Environmental factors that can affect astronaut wellness</p>
+                </div>
+            </div>
+
+            <div class="hazards-grid">
+                <div class="hazard-item">
+                    <span>☢</span>
+                    <h3>Radiation</h3>
+                    <p>Exposure to cosmic radiation during space travel.</p>
+                </div>
+
+                <div class="hazard-item">
+                    <span>◉</span>
+                    <h3>Microgravity</h3>
+                    <p>Changes in muscle, bone and cardiovascular function.</p>
+                </div>
+
+                <div class="hazard-item">
+                    <span>⌂</span>
+                    <h3>Isolation</h3>
+                    <p>Psychological challenges during long missions.</p>
+                </div>
+
+                <div class="hazard-item">
+                    <span>◷</span>
+                    <h3>Sleep Disruption</h3>
+                    <p>Irregular schedules and altered sleep patterns.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>SpaceHealth | Astronaut Health Monitoring Prototype</p>
+            <p>
+                Educational demonstration only. Not a medical device.
+                Demo thresholds are illustrative, not NASA medical standards.
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Load Chart.js first, then our JavaScript, only once -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
